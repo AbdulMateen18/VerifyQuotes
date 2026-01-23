@@ -1,0 +1,33 @@
+{
+  "name": "verify-quotes",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "scrape": "node scripts/scrape-tehranloh.js",
+    "parse-github": "node scripts/parse-github-data.js",
+    "import-db": "node scripts/import-to-mongodb.js",
+    "setup-data": "npm run scrape && npm run parse-github && npm run import-db"
+  },
+  "dependencies": {
+    "axios": "^1.13.2",
+    "cheerio": "^1.2.0",
+    "fuse.js": "^7.1.0",
+    "mongodb": "^7.0.0",
+    "next": "16.1.4",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "string-similarity": "^4.0.4",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "babel-plugin-react-compiler": "1.0.0",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.4",
+    "tailwindcss": "^4"
+  }
+}
